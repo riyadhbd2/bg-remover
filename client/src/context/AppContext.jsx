@@ -22,13 +22,14 @@ const AppContextProvider = ({children}) =>{
             console.log("Auth Token:", token); // Debugging token
     
             if (!token) {
-                throw new Error("No authentication token found. Please log in.");
+                throw new Error("No authentication token found. Please log in");
             }
     
-            const { data } = await axios.get(`${backendUrl}/api/user/credits`, {headers:{token}});
+            const { data } = await axios.get(`${backendUrl}/api/user/credits`, {headers:{token}})
     
             if (data.success) {
                 setCredit(data.credits)
+                console.log(data.credits)
             }
         } catch (error) {
             console.log(error);

@@ -59,7 +59,7 @@ const clerkWebhooks = async(req, res) =>{
 
 
 // api controller function to get user available data
-const userCrdeit = async (req, res) =>{
+const userCrdeits = async (req, res) =>{
     try {
         const { clerkId } = req.body;
 
@@ -73,4 +73,4 @@ const userCrdeit = async (req, res) =>{
     }
 }
 
-export {clerkWebhooks, userCrdeit};
+export {clerkWebhooks, userCrdeits};
