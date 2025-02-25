@@ -22,7 +22,7 @@ const removeBgImage = async(req, res)=>{
 
         const imagePath = req.file.path;
         // Reading the image file
-        const imageFile = fs.createWriteStream(imagePath);
+        const imageFile = fs.createReadStream(imagePath);
 
         const formdata = new FormData();
         formdata.append('image_file', imageFile)
